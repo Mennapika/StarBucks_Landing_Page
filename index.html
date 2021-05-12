@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="utf-8">
+    <title>StarBucks Landing Page</title>
+    <link rel="stylesheet" href="style.css"> 
+  </head>
+  <body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" ><img src="images\images\logo.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+             <h2>It's not Just Coffee<br>Its's <span>Starbucks</span></h2>
+            <p>
+                Every day, we go to work hoping to do two things: share great coffee with our friends and help make the world a little better.
+                 It was true when the first Starbucks opened in 1971, and it’s just as true today. We’re not just passionate purveyors of coffee,
+            </p>
+            <a href="#">Learn More</a>
+            </div>
+            <div>
+            <div class="imgBox">
+                 <img src="img1.png" class="starbucks">
+            </div>
+        </div>
+        </div>
+        <ul class="thumb">
+            <li> <img src="images\images\thumb1.png" onclick="imgSlider('img1.png');changeCircleColor('#017143');changeLearnColor('#017143');changeStarbuckColor('#017143')" ></li>
+            <li> <img src="images\images\thumb2.png "onclick="imgSlider('img2.png');changeCircleColor('#ff89c4');changeLearnColor('#ff89c4');changeStarbuckColor('#ff89c4')" ></li>
+            <li> <img src="images\images\thumb3.png" onclick="imgSlider('img3.png');changeCircleColor('#d752b1');changeLearnColor('#d752b1');changeStarbuckColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"> <img src="images\images\facebook.png" ></a></li>
+            <li><a href="#"> <img src="images\images\twitter.png" ></a></li>
+            <li><a href="#"> <img src="images\images\instagram.png" ></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+     function imgSlider(anything){
+         document.querySelector('.starbucks').src = anything;
+     }
+     function changeCircleColor(color){
+         const circle =document.querySelector('.circle');
+         circle.style.background=color;
+     }
+     function changeLearnColor(color){
+         const circle =document.querySelector('.content .textBox a');
+         circle.style.background=color;
+     }
+     function changeStarbuckColor(color){
+         const circle =document.querySelector('.content .textBox h2 span');
+         circle.style.color=color;
+     }
+    </script>
+  </body>
+</html>
